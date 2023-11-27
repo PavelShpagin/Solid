@@ -2,34 +2,48 @@
 
 //Lisco
 
-class Rectangle
+interface IShape 
+{
+	int GetArea();
+}
+
+class Rectangle : IShape
 {
 	public int Width { get; set; }
 	public int Height { get; set; }
-
-	public int GetRectangleArea()
+	public int GetArea()
 	{
 		return Width * Height;
 	}
+	public Rectangle(int width, int height)
+	{
+		Width = width;
+		Height = height;
+	}
 }
 
-class Square
+class Square : IShape
 {
 	public int Side { get; set; }
-	public int GetSquareArea()
+	public int GetArea()
 	{
 		return Side * Side;
+	}
+
+	public Square(int side)
+	{
+		Side = side;
 	}
 }
 class Program
 {
 	static void Main(string[] args)
 	{
-		Rectangle rect = new Rectangle();
-		rect.Width = 5;
-		rect.Height = 10;
+		IShape rect = new Rectangle(5, 10);
+		IShape square = new Square(5);
 
-		Console.WriteLine(rect.GetRectangleArea());
+		Console.WriteLine(rect.GetArea());
+		Console.WriteLine(square.GetArea());
 		Console.ReadKey();
 	}
 }

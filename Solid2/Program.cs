@@ -8,7 +8,7 @@
 Хоча, здавалося б, ці правки не стосуються відправки повідомлень. Очевидно, EmailSender виконує кілька обов'язків і, 
 щоб клас ні прив'язаний тільки до одного способу вести лог, потрібно винести вибір балки з цього класу.*/
 
-//dependence inversion
+//dependence inversion, single responibility, open closed
 class Email
 {
     public String Theme { get; set; }

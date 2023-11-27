@@ -27,12 +27,14 @@ namespace Solid1
                 itemList = value;
             }
         }
-
-        public void CalculateTotalSum() {/*...*/}
-        public void GetItems() {/*...*/}
-        public void GetItemCount() {/*...*/}
-        public void AddItem(Item item) {/*...*/}
-        public void DeleteItem(Item item) {/*...*/}
+    }
+    class OrderOperations
+    {
+        public void CalculateTotalSum(Order order) {/*...*/}
+        public void GetItems(Order order) {/*...*/}
+        public void GetItemCount(Order order) {/*...*/}
+        public void AddItem(Order order, Item item) {/*...*/}
+        public void DeleteItem(Order order,Item item) {/*...*/}
     }
     class OrderPrinter 
     {
